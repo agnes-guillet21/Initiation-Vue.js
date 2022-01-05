@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First example Vuejs</title>
+        <script src="https://unpkg.com/vue@3.2.26"></script>
+    </head>
+    <body>
+
+        <div id="app">   
+            <h1>hello world</h1>
+            <!--liaison avc le html pr que le href soit dynamique relie a la variable siteUrl : v-bind:href="siteUrl"  ou raccourci :href-->
+           <!-- <a v-bind:href="siteUrl">vuejs official website</a>-->
+            <a :href="`https://${{siteUrl}}`">vuejs official website</a> <!--- pr une partie statique le htpps + dynamique  on peut faire les ``-->
+        </div>
+
+        <script>
+            const app = Vue.createApp({
+
+                data() {
+            
+                       return {
+                           //siteUrl:'http://v3.vuejs.org'
+                           siteUrl:'v3.vuejs.org'
+                    
+                       }
+                   }
+
+            });
+            app.mount('#app');
+
+
+        </script>
+
+
+    </body>
+</html>

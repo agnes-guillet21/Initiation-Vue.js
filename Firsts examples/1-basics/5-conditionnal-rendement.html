@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First example Vuejs</title>
+        <script src="https://unpkg.com/vue@3.2.26"></script>
+    </head>
+    <body>
+
+        <div id="app">  
+            <!---- si la variable est true  le paragraphe s affjche  avc le v-if--->
+             <h1>Server status</h1>
+
+             <template v-if="isActive">
+                <h1>Bloc qui depend de isActive</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
+                id. .</p>
+                <p>Repudiandae, quis laboriosam? Porro unde laboriosam explicabo fugit sunt animi</p>
+            </template>
+             <p v-if="isActive">Server is Up</p>
+             <p v-else>Server is down</p>
+
+             <!-- si besoin d integrer  option qui existe--->
+             <p v-show="isActive">Access to server </p>
+        </div>
+
+        <script>
+            const app = Vue.createApp({
+
+                data() {
+                       return {
+                            isActive: false
+                       }
+                   }
+            });
+            app.mount('#app');
+
+
+        </script>
+
+
+    </body>
+</html>

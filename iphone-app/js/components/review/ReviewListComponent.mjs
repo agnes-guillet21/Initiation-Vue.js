@@ -6,12 +6,11 @@ const reviewListComponent = {
     <p> Hello from ListComponent</p>
     
     </article> `,
-data() {
-    return {
-        name: '',
-        review: '',
-        rating: 3,
-    }
-}
+    props:{
+        review: {
+            type: Array,
+            required: true
+        }
+    },
 }
 export default reviewListComponent

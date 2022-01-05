@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First example Vuejs</title>
+        <script src="https://unpkg.com/vue@3.2.26"></script>
+    </head>
+    <body>
+
+        <div id="app">  
+             <h1>hello world</h1>
+             <p :style=" { color:textColor, fontSize: fontSize +'px'}">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores exercitationem atque, numquam harum vero obcaecati debitis! Deleniti, 
+                  quasi quia magni fugiat doloremque neque quam facilis quas, repellat harum ratione totam.
+                   Fugit debitis delectus, facere iusto nesciunt placeat vitae
+                  corporis necessitatibus explicabo atque animi ullam sunt quas vero fuga soluta aperiam!</p>
+        </div>
+
+        <script>
+            const app = Vue.createApp({
+
+                data() {
+                    
+                       return {
+                           textColor: 'cyan',
+                           fontSize: 30
+                    
+                       }
+                   }
+
+            });
+            app.mount('#app');
+
+
+        </script>
+
+
+    </body>
+</html>
